@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import {createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar'
@@ -12,16 +11,16 @@ function App() {
    const router = createBrowserRouter([
           {
             path:"/",
-            element:<Home/>
+            element:  <><Navbar/><Home/></>
           },
           {
             path :'/login',
-            element:<Login/>
+            element: <><Navbar/><Login/></>
           },
           
           {
             path :'/About',
-            element:<About/>
+            element: <><Navbar/><About/></>
           },
           
       ])
@@ -29,7 +28,7 @@ function App() {
     <div className="App">
 
       <>
-      <Navbar/>
+    
       <RouterProvider router={router} /> 
       </>
 
